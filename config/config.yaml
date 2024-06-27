@@ -1,0 +1,43 @@
+data_source:
+    directory: 'data/raw/'
+    file_name: Fraud_Data.csv
+    columns: ['browser', 'source', 'age', 'sex', 'purchase_value', 'class']
+    features: ['browser', 'source', 'age', 'sex', 'purchase_value']
+    target_name: 'class'
+    cat_features: ['browser', 'source', 'sex']
+    num_features: ['age', 'purchase_value']
+    test_size: 0.3
+    random_state: 42
+    
+    
+train_test_data:
+    directory: 'data/processed/'
+    raw_dataset: raw_dataset.pkl
+    X_train: X_train.pkl
+    y_train: y_train.pkl
+    X_test: X_test.pkl
+    y_test: y_test.pkl
+    X_train_feng: X_train_feng.pkl
+    y_train_feng: y_train_feng.pkl
+    X_test_feng: X_test_feng.pkl
+    y_test_feng: y_test_feng.pkl
+    
+    
+data_defense:
+    browser: 
+        value: ['Chrome', 'IE', 'Safari', 'FireFox', 'Opera']
+    source: 
+        value: ['SEO', 'Ads', 'Direct']
+    age:
+    - 18
+    - 76
+    sex: 
+        value: ['M', 'F']
+    purchase_value:
+    - 9
+    - 154
+    
+    
+ohe_browser_path: data/processed/ohe_browser.pkl
+ohe_source_path: data/processed/ohe_source.pkl
+ohe_sex_path: data/processed/ohe_sex.pkl
