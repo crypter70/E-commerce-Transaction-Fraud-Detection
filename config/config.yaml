@@ -6,7 +6,7 @@ data_source:
     target_name: 'class'
     cat_features: ['browser', 'source', 'sex']
     num_features: ['age', 'purchase_value']
-    test_size: 0.3
+    test_size: 0.30
     random_state: 42
     
     
@@ -36,8 +36,32 @@ data_defense:
     purchase_value:
     - 9
     - 154
+
+
+ls_model:
+  random_state: [42]
+  
+  # Decision Tree
+  dt:
+    criterion: ['gini', 'entropy']
+    max_depth: [10, 20, 30, 40, 50, 60, 70]
+    class_weight: ['balanced']
+    
+  # Random Forest
+  rf:
+    n_estimators: [50, 100, 200, 300, 400]
+    max_depth: [10, 20, 30, 40, 50, 60, 70]
+    min_samples_split: [2, 5, 7]
+    class_weight: ['balanced']
     
     
-ohe_browser_path: data/processed/ohe_browser.pkl
-ohe_source_path: data/processed/ohe_source.pkl
-ohe_sex_path: data/processed/ohe_sex.pkl
+# final model: RandomForest
+final_model:
+    model_directory: 'models/'
+    model_name: Random_Forest_Classifier.pkl
+    parameter:
+        class_weight: 'balanced'
+        min_samples_split: 5
+        n_estimators: 50
+        random_state: 42
+  
