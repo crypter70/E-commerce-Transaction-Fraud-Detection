@@ -56,7 +56,7 @@ ls_model:
     
   # XGB
   xgb:
-    n_estimators: [50, 100]
+    n_estimators: [50, 100, 150, 200]
     learning_rate: [0.1]
     max_depth: [6]
     subsample: [0.8]
