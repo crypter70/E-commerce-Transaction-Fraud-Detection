@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     final_model = train_model(X_train, y_train)
     evaluation_model(final_model, X_test, y_test)
-    dump_model(final_model, 'DecisionTreeClassifier.pkl')
+    dump_model(final_model, 'Decision_Tree_Classifier.pkl')
 
     print('modeling OK')
 
