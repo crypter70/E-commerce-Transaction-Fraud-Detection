@@ -8,9 +8,6 @@ from pathlib import Path
 
 model_path = Path(__file__).parent / "Decision_Tree_Classifier.pkl"
 
-# model_path = '../Decision_Tree_Classifier.pkl'
-# model_path = 'Decision_Tree_Classifier.pkl'
-
 def pickle_load(file_path: str):
     return joblib.load(file_path)
 
