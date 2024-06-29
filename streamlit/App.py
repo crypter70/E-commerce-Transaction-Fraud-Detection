@@ -6,7 +6,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 from pathlib import Path
 
-model_path = Path(__file__).parent / "models/Decision_Tree_Classifier.pkl"
+model_path = Path(__file__).parent / "Decision_Tree_Classifier.pkl"
 
 # model_path = '../Decision_Tree_Classifier.pkl'
 # model_path = 'Decision_Tree_Classifier.pkl'
