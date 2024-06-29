@@ -4,7 +4,11 @@ import requests
 import joblib
 from sklearn.preprocessing import OneHotEncoder
 
-model_path = '../Decision_Tree_Classifier.pkl'
+from pathlib import Path
+
+model_path = Path(__file__).parent / "models/Decision_Tree_Classifier.pkl"
+
+# model_path = '../Decision_Tree_Classifier.pkl'
 # model_path = 'Decision_Tree_Classifier.pkl'
 
 def pickle_load(file_path: str):
@@ -16,6 +20,8 @@ def prediction(model, data):
     return y_pred
 
 def preprocessing(data):
+
+    # X_train_path = Path(__file__).parent / "models/Decision_Tree_Classifier.pkl"
 
     X_train = joblib.load('X_train.pkl')
 
