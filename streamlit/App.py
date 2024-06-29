@@ -4,7 +4,8 @@ import requests
 import joblib
 from sklearn.preprocessing import OneHotEncoder
 
-model_path = '../streamlit/Decision_Tree_Classifier.pkl'
+model_path = '../Decision_Tree_Classifier.pkl'
+# model_path = 'Decision_Tree_Classifier.pkl'
 
 def pickle_load(file_path: str):
     return joblib.load(file_path)
